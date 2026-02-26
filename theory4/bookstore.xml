@@ -1,0 +1,9 @@
+<bookstore>
+	<book category="SciFi">
+		<title>Harry Potter</title>
+		<Author></Author>
+	</book>
+	<book>
+
+	</book>
+</bookstore>

@@ -1,0 +1,22 @@
+<persons>
+	<teacher>
+
+	</teacher>
+	<student>
+		<ID>23-xxxxx-1</ID>
+		<Name>ABC</Name>
+		<Dept>CSE</Dept>
+		<CGPA>3.5</CGPA>
+		<Semester>
+			<name>Spring 25-26</name>
+			<courses>
+				<wt>
+					<grade>A+</grade>
+				</wt>
+				<se>
+					<grade>B+</grade>
+				</se>
+			</courses>
+		</Semester>
+	</student>
+</persons>
