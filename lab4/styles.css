@@ -1,0 +1,33 @@
+/* 
+1. What style to apply?
+	a. Which property?: CSS Propery
+	b. What is the new value?
+2. What element to apply on?: CSS Selector
+*/
+
+h1 {
+	background-color: lightblue;
+	font-weight: normal;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+/* p {
+	background-color: brown;
+} */
+
+/* #p1 {
+	font-style: italic;
+	font-weight: bold;
+	color: white;
+} */
+
+/* #p1, #p3, #p5 {
+	text-align: center;
+} */
+.oddpara {
+	text-align: center;
+}
+
+#p4:hover {
+	background-color: grey;
+}
