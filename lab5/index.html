@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// alert("This is a JS Alert.");
+		var a = 1;
+		var b = true;
+		(a==b) ? console.log("a and b are equal") : console.log("a and b are NOT equal");
+		// if (a===b) {
+		// 	console.log("a and b are equal");
+		// 
+		//
+		// } else {
+		// 	console.log("a and b are NOT equal");
+		// }
+		document.write("<h1>Dom manipulation demo</h1>");
+		function changeContent() {
+			var para = document.getElementById("p1");
+			console.log(para);
+			para.innerHTML = "New Content";
+		}
+	</script>	
+	<p id="p1">Old Content</p>
+	<button onclick="changeContent()">Change content</button>
+	<button onclick="alert('Alert From button')">Click me!</button>
+</body>
+</html>
