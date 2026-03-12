@@ -46,6 +46,7 @@
 
 	<script>
 		// Goal: add new row to the table
+		// function addRow(name, age) {
 		function addRow() {
 			// Step 1: load the table in JS
 			// getElementsByTagName always returns an array of elements
@@ -62,7 +63,7 @@
 			// Step 2.1: create the first table data
 			var td1 = document.createElement("td");
 			// <td></td>
-			td1.innerHTML = "John";
+			td1.innerHTML = "John"; // td1.innerHTML = name;
 			// <td>John</td>
 			newRow.appendChild(td1);
 			// <tr>
@@ -72,7 +73,7 @@
 			// Step 2.2: create the second table data
 			var td2 = document.createElement("td");
 			// <td></td>
-			td2.innerHTML = "35";
+			td2.innerHTML = "35"; // td2.innerHTML = age;
 			// <td>35</td>
 			newRow.appendChild(td2);
 			// <tr>
