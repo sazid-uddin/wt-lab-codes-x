@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<style>
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+
+		th, td {
+			padding: 10px;
+		}
+	</style>
+	<form>
+		<input type="text" placeholder="Name">
+		<input type="number" placeholder="Age">
+		<input onclick="addRow()" type="submit">
+		<!-- How to add row to the table with data from the form? -->
+		<!-- When clicking on submit button, the page reloads. How to stop this? -->
+	</form>
+	<br>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+		</tr>
+		<tr>
+			<td>Alice</td>
+			<td>20</td>
+		</tr>
+		<tr>
+			<td>Bob</td>
+			<td>25</td>
+		</tr>
+	</table>
+	<br>
+	<!-- <button onclick="addRow()">Add row to table</button> -->
+	<!-- <table>
+		<tr>
+			<td>Table 2</td>
+		</tr>
+	</table> -->
+
+	<script>
+		// Goal: add new row to the table
+		function addRow() {
+			// Step 1: load the table in JS
+			// getElementsByTagName always returns an array of elements
+			var tables = document.getElementsByTagName("table"); // gets all tables in the page/document
+			// console.log(tables);
+			var table = tables[0];
+			// console.log(table);
+			// document.getElementById // always returns single element
+
+			// Step 2: create a new row
+			var newRow = document.createElement("tr");
+			// <tr></tr>
+
+			// Step 2.1: create the first table data
+			var td1 = document.createElement("td");
+			// <td></td>
+			td1.innerHTML = "John";
+			// <td>John</td>
+			newRow.appendChild(td1);
+			// <tr>
+			//   <td>John</td>
+			// </tr>
+
+			// Step 2.2: create the second table data
+			var td2 = document.createElement("td");
+			// <td></td>
+			td2.innerHTML = "35";
+			// <td>35</td>
+			newRow.appendChild(td2);
+			// <tr>
+			//   <td>John</td>
+			//   <td>35</td>
+			// </tr>
+
+			// Step 3: add new row to the table
+			table.appendChild(newRow);
+		}
+	</script>
+</body>
+</html>

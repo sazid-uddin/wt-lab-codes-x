@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<p>List:</p>
+	<ol id="list">
+		<li>Item 1</li>
+		<li>Item 2</li>
+	</ol>	
+	<button onclick="addItem()">Add list item</button>
+	<script>
+		// Goal: add another list item to the list
+		function addItem() {
+			// Step 1: Load the list in JS
+			var list = document.getElementById("list");
+			// console.log(list);
+			var count = list.childElementCount;
+
+			// Step 2: create the new list item element to be added
+			var newListItem = document.createElement("li");
+			// <li></li>
+			newListItem.innerHTML = "Item " + (count+1).toString();
+			// <li>Item 3</li>
+
+			// Step 3: add the new list item to the list
+			list.appendChild(newListItem);
+		}
+	</script>
+</body>
+</html>
