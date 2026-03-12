@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<p id="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, voluptas pariatur quia cum repellat atque laboriosam eaque quaerat adipisci veniam libero, quas eligendi magni hic, doloribus sunt voluptatibus et maxime?</p>
+	<script>
+		var para = document.getElementById("p1");
+		para.addEventListener("mouseover", () => {
+			para.style.fontSize = "20px";
+		});
+
+		para.addEventListener("mouseleave", () => {
+			para.style.fontSize = "1em";
+		})
+	</script>	
+</body>
+</html>
