@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<form onsubmit="return false;">
+		Age: <input type="number" id="age" value="0">
+	</form>	
+	<p id="message"></p>
+</body>
+<script>
+	// load the input field in jS
+	var age_field = document.getElementById("age");
+	age_field.addEventListener("change", () => {
+		// get the user input value
+		// var age_value = age_field.value;
+		const age_value = age_field.value;
+
+		if (age_value < 0) {
+			// age_field.value = 0;
+			document.getElementById("message").innerHTML = "Age must be at least 0";
+			document.getElementById("message").style.color = "red";
+		} else 
+		//•	If the age is less than 40:
+		// → Show "To be a part of the community, you need to at least 40".
+		if (age_value < 40) {
+			document.getElementById("message").innerHTML = "To be a part of the community, you need to at least 40";
+			document.getElementById("message").style.color = "black"; // set default color
+		}
+		else if (age_value >= 40 && age_value <= 50) {
+			document.getElementById("message").innerHTML = "You are the youngsters of this community";
+			document.getElementById("message").style.color = "black"; // set default color
+		} 
+		else if (age_value > 50) {
+			document.getElementById("message").innerHTML = "Top level members of the group";
+			document.getElementById("message").style.color = "red";
+		}
+
+	});
+</script>
+</html>

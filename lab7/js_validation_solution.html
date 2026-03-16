@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<p>Unit Price: 1000</p>
+	Quantity: <input type="number" id="quantity" value="0">
+	<p id="total_price">Total Price: 0</p>
+	
+	<script>
+		document.getElementById("quantity").addEventListener("change", () => {
+			// Minimum Threshold
+			if (document.getElementById("quantity").value < 0) {
+				// option 1: reset to 0
+				document.getElementById("quantity").value = 0;
+
+				// option 2: display an error message
+				alert("Quantity cannot be negative number");
+			} else {
+				var total_price = document.getElementById("quantity").value * 1000;
+				document.getElementById("total_price").innerHTML = "Total Price: " + total_price;
+
+				// Gift Coupon Notification
+				if (total_price > 1000) {
+					alert("You are now eligible for a gift coupon");
+				}
+			}
+
+		});
+	</script>
+</body>
+</html>

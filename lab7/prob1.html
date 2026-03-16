@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<!-- how to prevent form submission -->
+	<!-- <form onsubmit="return false;"> -->
+	<form onsubmit="return validate();">
+		<input type="text" id="fn" placeholder="First Name">
+		<input type="text" id="ln" placeholder="Last Name">
+		<input type="submit">
+	</form>	
+	<p id="message" style="color: red;"></p>
+	<script>
+		function validate() {
+			// load the input fields in JS
+			var fn_field = document.getElementById("fn");
+			var ln_field = document.getElementById("ln");
+
+			// Validation Rule 1: Both fields must not be empty
+			// check the validation rule
+			if (fn_field.value === "" || ln_field.value === "") {
+				//show alert message
+				document.getElementById("message").innerHTML = "Both fields must not be empty";
+				// prevent form submission
+				return false;
+			}
+			// Validation Rule 2: •	Each field must have at least 2 characters.
+			if (fn_field.value.length < 2 || ln_field.value.length < 2) {
+				//show alert message
+				document.getElementById("message").innerHTML = "Each field must have at least 2 characters.";
+				// prevent form submission
+				return false;
+			}
+
+			// ensure form submission
+			return true;
+		}
+	</script>
+</body>
+</html>

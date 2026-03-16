@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<form onsubmit="return false;">
+		Username: <input type="text" id="username">
+	</form>	
+</body>
+
+<script>
+	// load input field in JS
+	var username_field = document.getElementById("username");
+	// username_field.addEventListener("keyup", () => {
+
+	// });
+
+
+	function uppercase() {
+		username_field.value = username_field.value.toUpperCase();
+	}
+	username_field.addEventListener("keyup", uppercase);
+</script>
+</html>
