@@ -1,0 +1,10 @@
+<books>
+	<book>
+		<BookTitle>The Wandering Oz</BookTitle>
+		<PublicationDate>2007</PublicationDate>
+	</book>
+	<book>
+		<BookTitle>The Roaming Fox</BookTitle>
+		<PublicationDate>2009</PublicationDate>
+	</book>
+</books>
