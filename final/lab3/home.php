@@ -56,5 +56,13 @@
 				}
 			?>
 		</table>
+		<br>
+		<br>
+		<form method="post" action="upload.php" enctype="multipart/form-data">
+			<p>Please upload your profile picture:</p>
+			<input type="file" name="profile_pic">
+			<input type="submit" value="Upload">
+		</form>
+		<a href="profile.php">View your profile</a>
 	</body>
 </html>
